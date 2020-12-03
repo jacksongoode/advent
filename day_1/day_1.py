@@ -1,10 +1,10 @@
 import time, itertools, math
 
-def day_1(r, stuff):
+def day_1(r, numbers):
     start = time.time()
 
-    stuff = sorted(stuff)
-    for i in itertools.combinations(stuff, r):
+    numbers = sorted(numbers)
+    for i in itertools.combinations(numbers, r):
         if sum(i) == 2020:
             print(f'Combination: {i}\nProduct: {math.prod(i)}')
 
@@ -13,7 +13,7 @@ def day_1(r, stuff):
             return
 
 if __name__ == '__main__':
-    input = open('day_1/input.txt', 'r')
-    stuff = [line.striplines() for line in input]
-    day_1(2, stuff)
-    day_1(3, stuff)
+    text = open('day_1/input.txt', 'r')
+    numbers = [int(line.strip()) for line in text]
+    day_1(2, numbers)
+    day_1(3, numbers)
