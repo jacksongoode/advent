@@ -21,7 +21,7 @@ def tree_looker(right, down):
 for index, (right, down) in enumerate(questions):
     answers[index] = tree_looker(right, down)
 
-finish = time.time()
-
 print(math.prod(answers))
+
+finish = time.time()
 print(f'Done in {(finish - start):.3f}s')

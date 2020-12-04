@@ -1,8 +1,8 @@
 import os, time
 
 start = time.time()
-pass_file = open('day_2/passwords.txt', 'r') 
-lines = pass_file.readlines() 
+passwords = open('day_2/input.txt', 'r') 
+lines = passwords.readlines() 
 valids_1, valids_2 = 0, 0
 
 for line in lines: 
@@ -29,9 +29,9 @@ for line in lines:
                 valids_2 += 1
         else: pass
 
-finish = time.time()
-
 print(f'Part 1: {valids_1}')
 print(f'Part 2: {valids_2}')
+
+finish = time.time()
 print(f'Done in {(finish - start):.3f}s')
 
